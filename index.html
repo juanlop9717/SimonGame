@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Simon Game!</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/master.css">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"> 
+</head>
+<body>
+<h1 class="text-center">Simon Game</h1>
+	<div class="container">
+		
+		<div class="divider"></div>
+		<div class="pack text-center">
+			<div class="first">
+				<div class="block" id="btn1"></div>
+				<div class="block" id="btn2"></div>
+			</div>
+			<div class="second">
+				<div class="block" id="btn3"></div>
+				<div class="block" id="btn4"></div>
+			</div>
+		</div>
+
+		<div class="filler">
+			<div id="start" class="button">
+			START
+			</div>
+			<div class="counter">
+				Counter : <span id="count">0</span> 
+			</div>
+			<!-- Rounded switch -->
+			<span class="stric">Strict Mode</span>
+			<label class="switch">
+			  <input type="checkbox" id="strick">
+			  <span class="slider round"></span>
+			</label>
+		</div>
+	</div>
+	<div id="lose" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">You lost! Do you wanna play again?</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" id="resetGame">Yes!</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Nope</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+	<script
+			  src="http://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
