@@ -15,6 +15,15 @@ $(document).ready(function(){
 	var checkCount;
 	var strictMode = true;
 
+	// Sound files
+	var greenBoop = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound1.mp3");
+	var redBoop = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound2.mp3");
+	var yellowBoop = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound3.mp3");
+	var blueBoop = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound4.mp3");
+	var scream = new Audio("http://soundbible.com/mp3/Female_Scream_Horror-NeoPhyTe-138499973.mp3");
+	var cheer = new Audio("http://soundbible.com/mp3/Kids%20Cheering-SoundBible.com-681813822.mp3");
+
+
 	//Activate/Desactivate strict mode 
 
 
@@ -45,6 +54,20 @@ $(document).ready(function(){
 					// Change to blind color
 					$('#btn'+ tempElement).css({backgroundColor: colorsNew[simonValue[i]]});
 					// Back to the original color after the time delay
+					console.log(i);
+					if(tempElement == 1){
+						blueBoop.play();
+					}
+					if(tempElement == 2){
+						redBoop.play();
+					}
+					if(tempElement == 3){
+						greenBoop.play();
+					}
+					if(tempElement == 4){
+						yellowBoop.play();
+					}
+				
 					setTimeout(function(){
 					backColor();
 				}, 800);
@@ -117,23 +140,28 @@ $(document).ready(function(){
 	});
 
 	$("#btn1").click(function(){
+		blueBoop.play();
 		colorActual(0);
 	});
 
 	$("#btn2").click(function(){
+		redBoop.play();
 		colorActual(1);
 	});
 
 	$("#btn3").click(function(){
+		greenBoop.play();
 		colorActual(2);
 	});
 
 	$("#btn4").click(function(){
+		yellowBoop.play();
 		colorActual(3);
 		
 	});
 
 	$("#resetGame").click(function(){
+		scream.play();
 		$("#lose").modal('hide');
 		randomBlind();
 	})
